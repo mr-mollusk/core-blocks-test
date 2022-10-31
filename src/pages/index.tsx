@@ -45,7 +45,6 @@ const Home: NextPage = () => {
             <NavBar
                 burgerHandler={burgerHandler}
                 isTitleVisible={isTitleVisible}
-                isMenuActive={isMenuActive}
             />
 
             <Menu isMenuActive={isMenuActive} />
