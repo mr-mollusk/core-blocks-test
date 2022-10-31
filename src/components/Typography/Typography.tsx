@@ -25,14 +25,14 @@ export type FontWeights =
     | 'bold'
     | 'extrabold';
 export type FontAligns = React.CSSProperties['textAlign'];
-export type FontColors = 'black' | 'white' | 'pink';
+// export type FontColors = 'black' | 'white' | 'pink';
 
 export type TypographyProps = {
     theme?: FontThemes;
     tag?: FontTags;
     weight?: FontWeights;
     align?: FontAligns;
-    color?: FontColors;
+    color?: string;
     withBg?: boolean;
     transparent?: boolean;
 } & React.DetailedHTMLProps<

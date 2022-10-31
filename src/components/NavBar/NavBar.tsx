@@ -1,32 +1,25 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { links } from 'src/data/mock';
+import clsx from 'clsx';
 import NavLink from '../Link/NavLink';
 import Typography from '../Typography/Typography';
 import styles from './NavBar.module.css';
 import UnionWhite from '../../assets/svg/union_white.svg';
 import UnionBlack from '../../assets/svg/union_black.svg';
-import clsx from 'clsx';
 
 export type NavBarProps = {
     burgerHandler: () => void;
     isTitleVisible: boolean;
-    isMenuActive: boolean;
 };
 
-const NavBar: React.FC<NavBarProps> = ({
-    burgerHandler,
-    isTitleVisible,
-    isMenuActive,
-}) => {
+const NavBar: React.FC<NavBarProps> = ({ burgerHandler, isTitleVisible }) => {
+    let color = 'white';
+    if (!isTitleVisible) color = 'black';
     return (
         <nav className={clsx(styles.navbar, !isTitleVisible && styles.black)}>
             <div className={styles.logo}>
                 {isTitleVisible ? <UnionWhite /> : <UnionBlack />}
-                <Typography
-                    theme="base"
-                    weight="bold"
-                    color={isTitleVisible && 'white'}
-                >
+                <Typography theme="base" weight="bold" color={color}>
                     Company
                 </Typography>
             </div>
@@ -47,11 +40,7 @@ const NavBar: React.FC<NavBarProps> = ({
 
             <div className={styles.navlinks}>
                 {links.map((link) => (
-                    <NavLink
-                        href="#"
-                        key={link.id}
-                        color={isTitleVisible && 'white'}
-                    >
+                    <NavLink href="#" key={link.id} color={color}>
                         {link.text}
                     </NavLink>
                 ))}

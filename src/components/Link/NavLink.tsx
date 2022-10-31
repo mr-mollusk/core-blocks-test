@@ -4,11 +4,9 @@ import Link from 'next/link';
 import Typography from '../Typography/Typography';
 import styles from './NavLink.module.css';
 
-export type LinkColors = 'white' | 'black';
-
 export type LinkProps = {
     href: string;
-    color?: LinkColors;
+    color?: string;
     menu?: boolean;
 };
 
