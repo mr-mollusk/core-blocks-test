@@ -1,0 +1,123 @@
+.footer {
+    position: relative;
+    margin: 64px auto;
+    padding-top: 64px;
+    width: 100%;
+    max-width: 1200px;
+    min-height: 236px;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 32px;
+}
+.footer__line {
+    position: absolute;
+    top: 0;
+    max-width: 1200px;
+    width: 100%;
+    height: 1px;
+    background: rgba(26, 26, 26, 0.1);
+}
+.footer__logo {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    height: 32px;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+.footer__links {
+    display: flex;
+    justify-content: space-between;
+}
+.links__block {
+    display: flex;
+    flex-direction: column;
+    min-width: 180px;
+    gap: 16px;
+}
+
+.img__block {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    min-width: 180px;
+    gap: 16px;
+}
+
+.footer__image {
+    width: 156px;
+}
+.footer__item {
+    display: flex;
+    align-items: center;
+}
+.footer__badge {
+    margin-left: 4px;
+    padding: 1px 8px ;
+    border-radius: 8px;
+    background: rgba(220, 235, 254, 1);
+}
+@media (max-width: 1024px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer__links {
+        flex-wrap: wrap;
+        order: 1;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+    .footer__logo {
+        margin: 0;
+    }
+    .img__block {
+        order: 2;
+    }
+    .img__block {
+        margin-bottom: 26px;
+    }
+    .footer__image {
+        width: 324px;
+        align-self: center;
+        background: #1a1a1a;
+        display: flex;
+        justify-content: center;
+        border-radius: 10px;
+    }
+
+    .footer__company {
+        max-width: 324px;
+        width: 80%;
+        order: 3;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .links__block {
+        max-width: 328px;
+        min-width: 152px;
+        margin-bottom: 32px;
+        text-align: left;
+    }
+}
+@media (max-width: 320px) {
+    .footer__links {
+        max-width: 280px;
+    }
+    .links__block {
+        min-width: 120px;
+    }
+    .footer__company {
+        max-width: 280px;
+    }
+    .links__block {
+        max-width: 280px;
+    }
+    .footer__image {
+        width: 280px;
+    }
+}

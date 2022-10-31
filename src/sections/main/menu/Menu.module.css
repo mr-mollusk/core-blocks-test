@@ -1,0 +1,55 @@
+.menu {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+
+    left: -100%;
+    top: 0;
+    padding: 0;
+    margin: 0;
+
+    background: #0c0b0b;
+    z-index: 6;
+    padding-top: 100px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+.container {
+    width: 328px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+.active {
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+}
+
+.blick1 {
+    position: absolute;
+    background: #be52ff;
+    width: 371.21px;
+    height: 353.23px;
+    right: -45%;
+    bottom: -50%;
+    filter: blur(103px);
+    transform: rotate(-15deg);
+}
+
+.blick2 {
+    position: absolute;
+    width: 371.21px;
+    height: 353.23px;
+    left: -221px;
+    top: -232.92px;
+    background: #f42ea2;
+    filter: blur(103px);
+    transform: rotate(-15deg);
+}
+@media (max-width: 320px) {
+    .container {
+        width: 280px;
+    }
+}

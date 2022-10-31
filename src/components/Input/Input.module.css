@@ -1,0 +1,38 @@
+.field {
+    height: 30px;
+    flex: 1 1 281px;
+    border: none;
+    background: #fdfdfd;
+    outline: none;
+    font-family: var(--font-1);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    color: rgba(26, 26, 26, 0.7);
+}
+.field::placeholder {
+    font-family: var(--font-1);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    color: rgba(26, 26, 26, 0.7);
+}
+
+@media (max-width: 1024px) {
+    .field {
+        flex: 0 0 44px;
+        max-width: 328px;
+        width: 100%;
+        border: 1px solid rgba(26, 26, 26, 0.2);
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.06),
+            0px 1px 3px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        padding-left: 16px;
+    }
+}
+
+@media (max-width: 320px) {
+    .field {
+        max-width: 280px;
+    }
+}
